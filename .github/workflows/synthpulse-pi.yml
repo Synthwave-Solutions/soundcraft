@@ -27,7 +27,6 @@ jobs:
           key: synthpulse-pi-arm64
       - name: Build own fork for Pi
         env:
-          CRAFT_FONTS_DIR: ${{ github.workspace }}/craft-fonts
           CRAFT_FONTS_REQUIRED: '0'
         run: packaging/linux/package.sh --formats deb
       - name: Validate release and write provenance
