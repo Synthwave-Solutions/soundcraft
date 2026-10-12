@@ -26,8 +26,6 @@ jobs:
           key: synthpulse-web
       - uses: storytold/craft-common-actions/actions/install-trunk@f0808a5ccbc32869248193ffab0de98d733de451
       - name: Build our browser app
-        env:
-          CRAFT_FONTS_DIR: ${{ github.workspace }}/craft-fonts
         run: packaging/web/package.sh
       - name: Validate release and write provenance
         run: |
